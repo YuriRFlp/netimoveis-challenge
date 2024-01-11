@@ -18,7 +18,7 @@ const NavBar = () => {
               <MdMenu size={30} onClick={() => menuHandler(!showMobileMenu)} />
             </div>
             {showMobileMenu &&
-              <div className="flex flex-col items-center w-screen absolute top-14 bg-secondary">
+              <div className="z-10 flex flex-col items-center w-screen absolute top-14 bg-secondary">
                 <span className="py-2 px-4 text-grey cursor-pointer">Imobiliárias</span>
                 <span className="py-2 px-4 text-grey cursor-pointer">Quero me associar</span>
                 <span className="flex items-center py-2 px-4 text-grey cursor-pointer">Sobre</span>

@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         'primary': '#ED672B',
+        'primaryHover': '#E95808',
         'secondary': '#FFF',
         'grey': '#555555',
         'purple': '#652D91',
