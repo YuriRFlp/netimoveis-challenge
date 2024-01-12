@@ -1,7 +1,7 @@
 import { MenuProps } from "@/interfaces";
 import { SetStateAction } from "react";
 
-const Menu = ({ options, optionsHandler }: MenuProps) => {
+const Menu = ({ options, optionsHandler, classContainer='', classContent='' }: MenuProps) => {
   const activeHandler = (item : { label: string, active: boolean }) => {
     const newOptions : SetStateAction<{ label: string; active: boolean; }[]> = options.map(op => {
       op.active = false;
@@ -13,19 +13,22 @@ const Menu = ({ options, optionsHandler }: MenuProps) => {
   };
 
   return (
-    <div className="mx-4 mt-8 mb-6 flex border-b border-[#E1E5E9]">
-      {options.map((op) => {
-        return (
-          <div
-            key={op.label}
-            onClick={() => activeHandler(op)}
-            className='cursor-pointer mr-4'
-          >
-            <p className={`${op.active ? 'text-[#393B3D]' : 'text-[#808587]'} px-2`}>{ op.label }</p>
-            { op.active && <div className="bg-primary w-full h-1"></div> }
-          </div>
-        )
-      })}
+    <div className={`${classContainer} border-b border-[#E1E5E9]`}>
+      <div className={`${classContent} flex`}>
+        {options.map((op) => {
+          return (
+            <div
+              key={op.label}
+              onClick={() => activeHandler(op)}
+              className='flex flex-col items-center text-center cursor-pointer mr-4 w-[60px]'
+            >
+              {op.icon && op.icon}
+              <p className={`${op.active ? 'text-[#393B3D]' : 'text-[#808587]'} px-2 hover:text-[#393B3D]`}>{ op.label }</p>
+              { op.active && <div className="bg-primary w-full h-1"></div> }
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 };

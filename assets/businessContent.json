@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Alugue sem complicação",
+    "description": "Alugue imóveis qualificados e sem repitição. Sed ut perspiciatis unde omnis iste natus error sit.",
+    "textButton": "Ver imóveis para Alugar",
+    "links": [
+      "Veja como Alugar sem Fiador",
+      "Saiba como funciona o Aluguel na Netimóveis"
+    ]
+  },
+  {
+    "title": "Compre com Segurança",
+    "description": "Compre seu imóvel com segurança e agilidade. Sed ut perspiciatis unde omnis iste natus error sit.",
+    "textButton": "Ver imóveis para Comprar",
+    "links": [
+      "Simule seu Financiamento",
+      "Saiba como funciona a Compra na Netimóveis"
+    ]
+  },
+  {
+    "title": "Anuncie seu Imóvel",
+    "description": "Anuncie gratuitamente na maior rede de imobiliárias do Brasil.",
+    "textButton": "Anunciar Imóvel",
+    "links": [
+      "Descubra Quanto Cobrar"
+    ]
+  }
+]
+
