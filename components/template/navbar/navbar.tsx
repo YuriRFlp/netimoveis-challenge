@@ -13,12 +13,12 @@ const NavBar = () => {
       {isMobile
         ?
           <>
-            <div className="z-10 fixed w-screen flex justify-between items-center bg-secondary px-4 py-2">
+            <div className="z-10 fixed w-screen flex justify-between items-center bg-secondary px-4 py-2 shadow">
               <Image src={logo} alt="Logo Netimóveis" />
               <MdMenu size={30} onClick={() => menuHandler(!showMobileMenu)} />
             </div>
             {showMobileMenu &&
-              <div className="z-10 flex flex-col items-center w-screen absolute top-14 bg-secondary">
+              <div className="z-10 flex flex-col items-center w-screen fixed top-14 bg-secondary shadow">
                 <span className="py-2 px-4 text-grey cursor-pointer">Imobiliárias</span>
                 <span className="py-2 px-4 text-grey cursor-pointer">Quero me associar</span>
                 <span className="flex items-center py-2 px-4 text-grey cursor-pointer">Sobre</span>
@@ -27,7 +27,7 @@ const NavBar = () => {
             }
           </>
         :
-          <div className="z-10 fixed w-screen flex justify-between items-center bg-secondary px-32 py-2">
+          <div className="z-10 fixed w-screen flex justify-between items-center bg-secondary px-32 py-2 shadow">
             <div className="flex">
               <Image src={logo} alt="Logo Netimóveis" />
               <div className="flex items-center ml-10">
