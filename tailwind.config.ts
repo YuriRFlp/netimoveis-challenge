@@ -12,6 +12,7 @@ const config: Config = {
         'primary': '#ED672B',
         'primaryHover': '#E95808',
         'secondary': '#FFF',
+        'blue': '#2362AF',
         'grey': '#555555',
         'purple': '#652D91',
       },

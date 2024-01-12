@@ -3,7 +3,11 @@
     "City": "Fortaleza",
     "Title": "Seaview Penthouse in Fortaleza",
     "Author": "Oceanfront Realty",
-    "Rooms": 4,
+    "Rooms": {
+      "bedroom": 4,
+      "bathroom": 1,
+      "park": 2
+    },
     "Tags": [
       "elevator",
       "furniture",
@@ -15,7 +19,11 @@
     "City": "Fortaleza",
     "Title": "Modern Loft in Fortaleza",
     "Author": "Cityscape Properties",
-    "Rooms": 1,
+    "Rooms": {
+      "bedroom": 1,
+      "bathroom": 1,
+      "park": 0
+    },
     "Tags": [
       "elevator",
       "furniture"
@@ -26,7 +34,11 @@
     "City": "Fortaleza",
     "Title": "Family-Friendly Apartment",
     "Author": "Sunset Homes",
-    "Rooms": 3,
+    "Rooms": {
+      "bedroom": 2,
+      "bathroom": 1,
+      "park": 1
+    },
     "Tags": [
       "furniture",
       "parking"
@@ -37,7 +49,11 @@
     "City": "Fortaleza",
     "Title": "Resort-Style Living in Fortaleza",
     "Author": "Tropical Real Estate",
-    "Rooms": 2,
+    "Rooms": {
+      "bedroom": 2,
+      "bathroom": 1,
+      "park": 1
+    },
     "Tags": [
       "elevator",
       "furniture",
@@ -49,7 +65,11 @@
     "City": "Fortaleza",
     "Title": "Luxury Apartment in Fortaleza",
     "Author": "Real Estate Company A",
-    "Rooms": 3,
+    "Rooms": {
+      "bedroom": 4,
+      "bathroom": 2,
+      "park": 2
+    },
     "Tags": [
       "elevator",
       "furniture",
@@ -61,7 +81,11 @@
     "City": "Fortaleza",
     "Title": "Cozy Apartment in Fortaleza",
     "Author": "Comfort Homes",
-    "Rooms": 2,
+    "Rooms": {
+      "bedroom": 5,
+      "bathroom": 2,
+      "park": 2
+    },
     "Tags": [
       "furniture",
       "parking"
@@ -72,7 +96,11 @@
     "City": "Belo Horizonte",
     "Title": "Hillside Villa in Belo Horizonte",
     "Author": "Elevated Estates",
-    "Rooms": 5,
+    "Rooms": {
+      "bedroom": 2,
+      "bathroom": 1,
+      "park": 1
+    },
     "Tags": [
       "elevator",
       "furniture",
@@ -84,7 +112,11 @@
     "City": "Belo Horizonte",
     "Title": "Historic District Apartment",
     "Author": "Heritage Homes",
-    "Rooms": 2,
+    "Rooms": {
+      "bedroom": 2,
+      "bathroom": 1,
+      "park": 1
+    },
     "Tags": [
       "furniture",
       "parking"
@@ -95,7 +127,11 @@
     "City": "Belo Horizonte",
     "Title": "Executive Suite in Belo Horizonte",
     "Author": "Business Residences",
-    "Rooms": 3,
+    "Rooms": {
+      "bedroom": 3,
+      "bathroom": 1,
+      "park": 1
+    },
     "Tags": [
       "elevator",
       "furniture"
@@ -106,7 +142,11 @@
     "City": "Belo Horizonte",
     "Title": "Scenic View Condo",
     "Author": "Vista Homes",
-    "Rooms": 4,
+    "Rooms": {
+      "bedroom": 4,
+      "bathroom": 2,
+      "park": 2
+    },
     "Tags": [
       "elevator",
       "parking"
@@ -117,7 +157,11 @@
     "City": "Belo Horizonte",
     "Title": "Cozy Apartment in Belo Horizonte",
     "Author": "Urban Living Properties",
-    "Rooms": 3,
+    "Rooms": {
+      "bedroom": 3,
+      "bathroom": 1,
+      "park": 1
+    },
     "Tags": [
       "elevator",
       "parking"
@@ -128,7 +172,11 @@
     "City": "Belo Horizonte",
     "Title": "Downtown Penthouse in Belo Horizonte",
     "Author": "City Center Residences",
-    "Rooms": 2,
+    "Rooms": {
+      "bedroom": 1,
+      "bathroom": 1,
+      "park": 0
+    },
     "Tags": [
       "furniture",
       "parking"
@@ -139,7 +187,11 @@
     "City": "São Paulo",
     "Title": "Sky-High Skyscraper Residence",
     "Author": "Altitude Living",
-    "Rooms": 3,
+    "Rooms": {
+      "Bedroom": 3,
+      "bathroom": 1,
+      "park": 1
+    },
     "Tags": [
       "elevator",
       "furniture",
@@ -151,7 +203,11 @@
     "City": "São Paulo",
     "Title": "Artistic Studio in São Paulo",
     "Author": "Creative Spaces",
-    "Rooms": 1,
+    "Rooms": {
+      "bedroom": 2,
+      "bathroom": 1,
+      "park": 1
+    },
     "Tags": [
       "furniture"
     ],
@@ -161,7 +217,11 @@
     "City": "São Paulo",
     "Title": "Tech Hub Apartment",
     "Author": "Innovation Homes",
-    "Rooms": 2,
+    "Rooms": {
+      "bedroom": 2,
+      "bathroom": 1,
+      "park": 1
+    },
     "Tags": [
       "elevator",
       "furniture",
@@ -173,7 +233,11 @@
     "City": "São Paulo",
     "Title": "Premium Downtown Condo",
     "Author": "Metropolitan Realty",
-    "Rooms": 4,
+    "Rooms": {
+      "bedroom": 4,
+      "Bathroom": 3,
+      "Park": 2
+    },
     "Tags": [
       "elevator",
       "parking"
@@ -184,7 +248,11 @@
     "City": "São Paulo",
     "Title": "Modern Loft in São Paulo",
     "Author": "Urban Innovators",
-    "Rooms": 2,
+    "Rooms": {
+      "bedroom": 2,
+      "Bathroom": 1,
+      "Park": 1
+    },
     "Tags": [
       "furniture",
       "parking"
@@ -195,7 +263,11 @@
     "City": "São Paulo",
     "Title": "City Center Penthouse",
     "Author": "Downtown Living",
-    "Rooms": 3,
+    "Rooms": {
+      "bedroom": 2,
+      "Bathroom": 1,
+      "Park": 1
+    },
     "Tags": [
       "elevator",
       "furniture"

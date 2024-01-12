@@ -3,6 +3,7 @@ import { Source_Sans_3 } from 'next/font/google';
 import './globals.css';
 import NavBar from '@/components/template/navbar/navbar';
 import GlobalProvider from '@/context/globalContext';
+import 'react-multi-carousel/lib/styles.css';
 
 const sans = Source_Sans_3({ subsets: ['latin'] })
 

@@ -13,7 +13,7 @@ const NavBar = () => {
       {isMobile
         ?
           <>
-            <div className="fixed w-screen flex justify-between items-center bg-secondary px-4 py-2">
+            <div className="z-10 fixed w-screen flex justify-between items-center bg-secondary px-4 py-2">
               <Image src={logo} alt="Logo Netimóveis" />
               <MdMenu size={30} onClick={() => menuHandler(!showMobileMenu)} />
             </div>
@@ -27,7 +27,7 @@ const NavBar = () => {
             }
           </>
         :
-          <div className="fixed w-screen flex justify-between items-center bg-secondary px-32 py-2">
+          <div className="z-10 fixed w-screen flex justify-between items-center bg-secondary px-32 py-2">
             <div className="flex">
               <Image src={logo} alt="Logo Netimóveis" />
               <div className="flex items-center ml-10">

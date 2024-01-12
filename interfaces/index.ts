@@ -27,3 +27,24 @@ export interface MenuProps {
   optionsHandler: Dispatch<SetStateAction<{ label: string; active: boolean; }[]>>;
 }
 
+export interface CarouselProps {
+  items: Array<any>;
+  mobile: boolean;
+}
+
+export interface AdsProps {
+  mobile: boolean;
+}
+
+export interface FlatCardProps {
+  city: string;
+  title: string;
+  author: string;
+  rooms: {bedroom: number, bathroom: number, park: number};
+  tags: string[];
+  price: number;
+  image: any;
+  showIcons?: boolean;
+  mobile: boolean;
+}
+
