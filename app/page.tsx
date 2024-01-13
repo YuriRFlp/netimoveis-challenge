@@ -71,6 +71,7 @@ export default function Home() {
               links={businessContent.links}
               menuOptions={businessTypes}
               optionsHandler={businessTypesHandler}
+              classCustom="w-[504px] min-h-[416px]"
             />
         }
       </section>
@@ -101,6 +102,7 @@ export default function Home() {
               links={filtersContent.links}
               menuOptions={filtersTypes}
               optionsHandler={filtersTypesHandler}
+              classCustom="w-[488px]"
             />
           </section>
       }

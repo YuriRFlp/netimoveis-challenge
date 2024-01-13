@@ -80,6 +80,7 @@ export interface MenuCardProps {
   }[]) => void;
   mobile?: boolean;
   links?: string[];
+  classCustom?: string;
 }
 
 export interface MenuCardMobileProps {

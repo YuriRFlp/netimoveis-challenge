@@ -10,10 +10,11 @@ const MenuCard = ({
   menuOptions,
   optionsHandler,
   mobile=false,
+  classCustom='',
   links = []
 }: MenuCardProps) => {
   return (
-    <div className={`${mobile ? 'bg-transparent' : 'bg-secondary pt-8 pb-4 rounded-xl w-[504px] min-h-[416px]'}`}>
+    <div className={`${mobile ? 'bg-transparent' : 'bg-secondary pt-8 pb-4 rounded-xl'} ${!mobile && classCustom}`}>
       <Menu
         options={menuOptions}
         optionsHandler={optionsHandler}
