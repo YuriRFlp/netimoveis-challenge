@@ -1,11 +1,12 @@
 "use client";
-import Ads from "@/components/ads/ads";
+import FlatAds from "@/components/flatAds/flatAds";
 import Banner from "@/components/banner/banner";
 import MenuCard from "@/components/shared/menuCard/menuCard";
 import MenuCardMobile from "@/components/shared/menuCard/menuCardMobile";
 import { GlobalContext } from "@/context/globalContext";
 import { useContext } from "react";
 import BusinessContentMobile from '@/assets/businessContentMobile.json';
+import Image from "next/image";
 
 export default function Home() {
   const {
@@ -15,6 +16,9 @@ export default function Home() {
     businessTypes,
     businessTypesHandler,
     businessContent,
+    filtersTypes,
+    filtersTypesHandler,
+    filtersContent,
   } = useContext(GlobalContext);
 
   return (
@@ -25,9 +29,9 @@ export default function Home() {
         optionsHandler={searchTypesHandler}
       />
 
-      <Ads mobile={isMobile} />
+      <FlatAds mobile={isMobile} />
 
-      <section className={`flex py-16 ${isMobile ? 'flex-col bg-[#E1E5E9] px-4' : 'justify-between items-baseline bg-gradient-to-r from-secondary to-[#E1E5E9] px-32'}`}>
+      <section className={`flex pt-16 pb-12 ${isMobile ? 'flex-col bg-[#EDF1F4] px-4' : 'justify-between items-baseline bg-gradient-to-r from-secondary to-[#E1E5E9] px-32'}`}>
         <div className={`text-left ${isMobile ? 'w-full' : 'w-[55%] max-w-[500px] mr-8'}`}>
           <h1 className={`font-bold text-[#4E5254] ${isMobile ? 'text-[34px]' : 'text-6xl'}`}>Encontre um lugar que é a sua cara</h1>
           {isMobile
@@ -70,6 +74,36 @@ export default function Home() {
             />
         }
       </section>
+
+      {isMobile
+        ?
+          <section className="bg-[#EDF1F4] border-t-2 border-[#E1E5E9] pb-6 pt-12">
+            <MenuCard
+              mobile
+              title={filtersContent.title}
+              description={filtersContent.description}
+              textButton={filtersContent.textButton}
+              links={filtersContent.links}
+              menuOptions={filtersTypes}
+              optionsHandler={filtersTypesHandler}
+            />
+            <div style={{ backgroundImage: `url(${(filtersContent.image || [])[0]})` }} className='h-[208px] object-contain'></div>
+          </section>
+        :
+          <section
+            style={{ backgroundImage: `url(${(filtersContent.image || [])[0]})` }}
+            className='py-[58px] px-32 bg-top bg-no-repeat'
+          >
+            <MenuCard
+              title={filtersContent.title}
+              description={filtersContent.description}
+              textButton={filtersContent.textButton}
+              links={filtersContent.links}
+              menuOptions={filtersTypes}
+              optionsHandler={filtersTypesHandler}
+            />
+          </section>
+      }
     </main>
   )
 }

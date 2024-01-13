@@ -16,7 +16,14 @@ export interface GlobalContextData {
     active: boolean;
     icon?: any;
   }[]) => void;
+  filtersTypes: { label: string, active: boolean, icon?: any }[];
+  filtersTypesHandler: (value: {
+    label: string;
+    active: boolean;
+    icon?: any;
+  }[]) => void;
   businessContent: { title: string, description: string, textButton: string, links?: string[] };
+  filtersContent: { title: string, description: string, textButton: string, links?: string[], image?: any; };
 };
 
 export interface BannerProps {
@@ -45,7 +52,7 @@ export interface CarouselProps {
   mobile: boolean;
 }
 
-export interface AdsProps {
+export interface FlatAdsProps {
   mobile: boolean;
 }
 
@@ -71,6 +78,7 @@ export interface MenuCardProps {
     active: boolean;
     icon?: any;
   }[]) => void;
+  mobile?: boolean;
   links?: string[];
 }
 

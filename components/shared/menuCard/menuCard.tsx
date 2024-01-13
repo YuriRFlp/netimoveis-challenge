@@ -9,20 +9,25 @@ const MenuCard = ({
   textButton,
   menuOptions,
   optionsHandler,
+  mobile=false,
   links = []
 }: MenuCardProps) => {
   return (
-    <div className="bg-secondary m-3 pb-4 rounded-xl w-[504px] h-[416px]">
+    <div className={`${mobile ? 'bg-transparent' : 'bg-secondary pt-8 pb-4 rounded-xl w-[504px] min-h-[416px]'}`}>
       <Menu
         options={menuOptions}
         optionsHandler={optionsHandler}
-        classContainer='mt-8 mb-6'
+        classContainer='mb-6'
         classContent="px-10 justify-between"
       />
       <div className="mx-10">
-        <h1 className="font-bold text-{#393B3D} text-[30px] mb-2">{title}</h1>
-        <p  className="text-[#808587] text-sm mb-8">{description}</p>
-        <button className="border rounded-lg border-[#8224CB] text-[#8224CB] py-1 px-4 font-semibold hover:text-secondary hover:bg-[#8224CB]">
+        <h1 className={`font-bold text-{#393B3D} text-[30px] mb-2 ${mobile ? 'mt-10 leading-10' : ''}`}>
+          {title}
+        </h1>
+        <p className={`text-[#808587] mb-8 ${mobile ? 'text-base' : 'text-sm'}`}>
+          {description}
+        </p>
+        <button className={`border rounded-lg border-[#8224CB] text-[#8224CB] font-semibold hover:text-secondary hover:bg-[#8224CB] px-4 ${mobile ? 'py-2' : 'py-1'}`}>
           {textButton}
         </button>
         <div className="my-6">
