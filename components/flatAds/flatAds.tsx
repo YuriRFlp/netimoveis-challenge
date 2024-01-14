@@ -22,6 +22,8 @@ const FlatAds = ({ mobile }: FlatAdsProps) => {
       </button>
       <MultiCarousel
         mobile={mobile}
+        desktopBreakPoint={3.003}
+        mobileBreakPoint={1.003}
         items={
           flats.map((flat, index) => {
             const flat_instance = new Flat(

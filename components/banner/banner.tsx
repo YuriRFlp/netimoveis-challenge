@@ -20,7 +20,7 @@ const Banner = ({ mobile, menuOptions, optionsHandler }: BannerProps) => {
           </>
         :
           <>
-            <Image src={bannerImage} alt="Banner de busca de apartamentos"/>
+            <Image src={bannerImage} alt="Banner de busca de apartamentos" />
             <div className='absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4 w-3/6 text-center'>
               <h1 className='text-4xl text-secondary'>Vende. Aluga. Conecta.</h1>
               <Search mobile={mobile} />

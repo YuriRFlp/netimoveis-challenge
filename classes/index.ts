@@ -22,3 +22,22 @@ export class Flat {
     this.price = price;
   }
 }
+
+export class Place {
+  name: string;
+  state: {name: string, shortname: string};
+  placeId: number;
+  image: any;
+
+  constructor(
+    name: string,
+    state: {name: string, shortname: string},
+    placeId: number,
+    image: any,
+  ) {
+    this.name = name;
+    this.state = state;
+    this.placeId = placeId;
+    this.image = image;
+  }
+}

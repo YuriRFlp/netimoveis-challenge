@@ -50,6 +50,8 @@ export interface MenuProps {
 export interface CarouselProps {
   items: Array<any>;
   mobile: boolean;
+  desktopBreakPoint: number;
+  mobileBreakPoint: number;
 }
 
 export interface FlatAdsProps {
@@ -91,5 +93,14 @@ export interface MenuCardMobileProps {
 }
 
 export interface FreeAdsProps {
+  mobile: boolean;
+}
+
+export interface PlaceCardProps {
+  name: string;
+  state: {name: string, shortname: string};
+  placeId: number;
+  image: any;
+  content: string[];
   mobile: boolean;
 }

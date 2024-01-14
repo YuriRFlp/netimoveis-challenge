@@ -1,25 +1,26 @@
 import { CarouselProps } from "@/interfaces";
 import Carousel from "react-multi-carousel";
 
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3.5,
-    slidesToSlide: 3.5,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 2,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1.003,
-    slidesToSlide: 1.003,
-  },
-};
 
-const MultiCarousel = ({mobile, items} : CarouselProps) => {
+const MultiCarousel = ({mobile, items, desktopBreakPoint, mobileBreakPoint} : CarouselProps) => {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: desktopBreakPoint,
+      slidesToSlide: desktopBreakPoint,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: mobileBreakPoint,
+      slidesToSlide: mobileBreakPoint,
+    },
+  };
+
   return (
     <Carousel
       swipeable={true}

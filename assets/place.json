@@ -5,7 +5,8 @@
       "name": "Minas Gerais",
       "shortname": "MG"
     },
-    "placeId": 1
+    "placeId": 1,
+    "image": "MG.png"
   },
   {
     "name": "Fortaleza",
@@ -13,7 +14,26 @@
       "name": "Ceará",
       "shortname": "CE"
     },
-    "placeId": 2
+    "placeId": 2,
+    "image": "CE.png"
+  },
+  {
+    "name": "Porto Alegre",
+    "state": {
+      "name": "Rio Grande do Sul",
+      "shortname": "RS"
+    },
+    "placeId": 3,
+    "image": "RS.png"
+  },
+  {
+    "name": "Rio de Janeiro",
+    "state": {
+      "name": "Rio de Janeiro",
+      "shortname": "RJ"
+    },
+    "placeId": 4,
+    "image": "RJ.png"
   },
   {
     "name": "São Paulo",
@@ -21,6 +41,61 @@
       "name": "São Paulo",
       "shortname": "SP"
     },
-    "placeId": 5
+    "placeId": 5,
+    "image": "SP.png"
+  },
+  {
+    "name": "Salvador",
+    "state": {
+      "name": "Bahia",
+      "shortname": "BA"
+    },
+    "placeId": 6,
+    "image": "BA.png"
+  },
+  {
+    "name": "Brasília",
+    "state": {
+      "name": "Distrito Federal",
+      "shortname": "DF"
+    },
+    "placeId": 7,
+    "image": "DF.png"
+  },
+  {
+    "name": "Vitória",
+    "state": {
+      "name": "Espirito Santo",
+      "shortname": "ES"
+    },
+    "placeId": 8,
+    "image": "ES.png"
+  },
+  {
+    "name": "Florianópolis",
+    "state": {
+      "name": "Santa Catarina",
+      "shortname": "SC"
+    },
+    "placeId": 9,
+    "image": "SC.png"
+  },
+  {
+    "name": "João Pessoa",
+    "state": {
+      "name": "Paraíba",
+      "shortname": "PB"
+    },
+    "placeId": 10,
+    "image": "PB.png"
+  },
+  {
+    "name": "Lisboa",
+    "state": {
+      "name": "Portugal",
+      "shortname": "PT"
+    },
+    "placeId": 11,
+    "image": "PT.png"
   }
 ]
