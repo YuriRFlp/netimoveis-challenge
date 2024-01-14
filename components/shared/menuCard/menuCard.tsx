@@ -14,14 +14,14 @@ const MenuCard = ({
   links = []
 }: MenuCardProps) => {
   return (
-    <div className={`${mobile ? 'bg-transparent' : 'bg-secondary pt-8 pb-4 rounded-xl'} ${!mobile && classCustom}`}>
+    <div className={`${mobile ? 'bg-transparent mb-14' : 'bg-secondary pt-8 pb-4 rounded-xl'} ${!mobile && classCustom}`}>
       <Menu
         options={menuOptions}
         optionsHandler={optionsHandler}
         classContainer='mb-6'
-        classContent="px-10 justify-between"
+        classContent={`justify-between ${mobile ? "px-4" : "px-10"}`}
       />
-      <div className="mx-10">
+      <div className={`${mobile ? "mx-4" : "mx-10"}`}>
         <h1 className={`font-bold text-{#393B3D} text-[30px] mb-2 ${mobile ? 'mt-10 leading-10' : ''}`}>
           {title}
         </h1>

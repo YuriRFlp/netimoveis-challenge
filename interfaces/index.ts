@@ -90,3 +90,6 @@ export interface MenuCardMobileProps {
   links?: string[];
 }
 
+export interface FreeAdsProps {
+  mobile: boolean;
+}

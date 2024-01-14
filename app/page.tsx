@@ -6,7 +6,8 @@ import MenuCardMobile from "@/components/shared/menuCard/menuCardMobile";
 import { GlobalContext } from "@/context/globalContext";
 import { useContext } from "react";
 import BusinessContentMobile from '@/assets/businessContentMobile.json';
-import Image from "next/image";
+import FreeAds from "@/components/freeAds/freeAds";
+
 
 export default function Home() {
   const {
@@ -31,7 +32,7 @@ export default function Home() {
 
       <FlatAds mobile={isMobile} />
 
-      <section className={`flex pt-16 pb-12 ${isMobile ? 'flex-col bg-[#EDF1F4] px-4' : 'justify-between items-baseline bg-gradient-to-r from-secondary to-[#E1E5E9] px-32'}`}>
+      <section className={`flex pt-16 ${isMobile ? 'flex-col bg-[#EDF1F4] px-4 pb-12' : 'justify-between items-baseline bg-gradient-to-r from-secondary to-[#E1E5E9] px-32 pb-24'}`}>
         <div className={`text-left ${isMobile ? 'w-full' : 'w-[55%] max-w-[500px] mr-8'}`}>
           <h1 className={`font-bold text-[#4E5254] ${isMobile ? 'text-[34px]' : 'text-6xl'}`}>Encontre um lugar que é a sua cara</h1>
           {isMobile
@@ -106,6 +107,10 @@ export default function Home() {
             />
           </section>
       }
+
+      <section className={`py-16 ${isMobile ? 'bg-[#EDF1F4]' : 'px-32'}`}>
+        <FreeAds mobile={isMobile} />
+      </section>
     </main>
   )
 }
