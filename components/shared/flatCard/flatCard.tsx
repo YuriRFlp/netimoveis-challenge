@@ -8,7 +8,7 @@ const FlatCard = ({ city, title, author, rooms, price, tags, image, mobile, show
   return (
     <div className={`border border-[#D9D9D9] rounded-xl ${mobile ? 'max-w-[250px]' : 'max-w-[275px]'} cursor-pointer mb-8`}>
       <div className="relative">
-        <Image src={image} alt="Imagem do flat" className="rounded-t-xl" />
+        <Image src={image} alt="Imagem do flat" className="rounded-t-xl"	loading="lazy" />
         {showIcons &&
           <div className="flex items-center absolute top-2 left-2 p-1 rounded-full bg-secondary tex-[#652D91]">
             <MdVideocam className="mx-1" size={15} color="#652D91"  />

@@ -14,7 +14,7 @@ const NavBar = () => {
         ?
           <>
             <div className="z-10 fixed w-screen flex justify-between items-center bg-secondary px-4 py-2 shadow">
-              <Image src={logo} alt="Logo Netimóveis" />
+              <Image src={logo} alt="Logo Netimóveis"	loading="lazy" />
               <MdMenu size={30} onClick={() => menuHandler(!showMobileMenu)} />
             </div>
             {showMobileMenu &&
@@ -29,7 +29,7 @@ const NavBar = () => {
         :
           <div className="z-10 fixed w-screen flex justify-between items-center bg-secondary px-32 py-2 shadow">
             <div className="flex">
-              <Image src={logo} alt="Logo Netimóveis" />
+              <Image src={logo} alt="Logo Netimóveis"	loading="lazy" />
               <div className="flex items-center ml-10">
                 <span className="mx-2 px-2 text-grey cursor-pointer">Imobiliárias</span>
                 <span className="mx-2 px-2 text-grey cursor-pointer">Quero me associar</span>

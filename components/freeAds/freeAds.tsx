@@ -8,7 +8,7 @@ const FreeAds = ({ mobile } : FreeAdsProps) => {
   return (
     <>
       <div className={`${mobile ? 'px-4' : "flex items-center justify-between border border-[#D0D5D8] rounded-xl"}`}>
-        {!mobile && <Image src={AnuncieGratis} alt="Anúncio grátis" className="rounded-s-xl" />}
+        {!mobile && <Image src={AnuncieGratis} alt="Anúncio grátis" className="rounded-s-xl"	loading="lazy" />}
         <div className={`${!mobile && 'mx-6' }`}>
           <h1 className="font-bold text-primary mb-3">
             { mobile ? 'Quer vender?' : 'Quer Vender ou Alugar?' }
@@ -27,7 +27,7 @@ const FreeAds = ({ mobile } : FreeAdsProps) => {
           </div>
         </div>
       </div>
-      {mobile && <Image src={AnuncieGratis} alt="Anúncio grátis" />}
+      {mobile && <Image src={AnuncieGratis} alt="Anúncio grátis"	loading="lazy" />}
     </>
   )
 };

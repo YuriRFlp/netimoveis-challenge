@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 const PlaceCard = ({ name, state, placeId, image, content, mobile } : PlaceCardProps) => {
   return (
-    <div className='w-[294px] mb-8 cursor-pointer'>
+    <div className={`w-[294px] cursor-pointer ${!mobile && 'mb-8'}`}>
       <div className='relative rounded-xl h-[192px] mb-6'>
-        <Image src={image} alt='Imagem dos Estados' className='rounded-xl' />
+        <Image src={image} alt='Imagem dos Estados' className='rounded-xl'	loading="lazy" />
         <h2 style={{ textShadow: '1px 1px #333' }} className='absolute bottom-2 left-4 font-bold text-secondary text-2xl'>
           { state.name }
         </h2>

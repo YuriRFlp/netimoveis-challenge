@@ -11,6 +11,7 @@ import MultiCarousel from "@/components/shared/carousel/carousel";
 import Places from '@/assets/place.json';
 import { Place } from "@/classes";
 import PlaceCard from "@/components/shared/placeCard/placeCard";
+import Image from "next/image";
 
 import BA from '@/assets/images/BA.png';
 import CE from '@/assets/images/CE.png';
@@ -23,6 +24,9 @@ import RJ from '@/assets/images/RJ.png';
 import RS from '@/assets/images/RS.png';
 import SC from '@/assets/images/SC.png';
 import SP from '@/assets/images/SP.png';
+import Portugal from '@/assets/images/portugal.png';
+import PortugalMobile from '@/assets/images/portugal-mobile.png';
+
 
 
 const PLACE_IMAGES = {
@@ -120,11 +124,11 @@ export default function Home() {
               menuOptions={filtersTypes}
               optionsHandler={filtersTypesHandler}
             />
-            <div style={{ backgroundImage: `url(${(filtersContent.image || [])[0]})` }} className='h-[208px] bg-cover bg-top'></div>
+            <div style={{ backgroundImage: `url(${filtersContent.image})` }} className='h-[208px] bg-cover bg-top'></div>
           </section>
         :
           <section
-            style={{ backgroundImage: `url(${(filtersContent.image || [])[0]})` }}
+            style={{ backgroundImage: `url(${filtersContent.image})` }}
             className='py-[58px] px-32 bg-top bg-no-repeat bg-cover'
           >
             <MenuCard
@@ -174,6 +178,23 @@ export default function Home() {
               })
             }
           />
+        </div>
+
+        <div
+          style={{
+            background: `linear-gradient(to right, rgba(0,0,0,0.75), transparent), url(${isMobile ? PortugalMobile.src : Portugal.src})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'bottom right'
+          }}
+          className={`rounded-xl ${isMobile ? "mx-4 px-4 py-8" : "flex justify-between items-center py-7 px-10"}`}
+        >
+          <h1 className={`text-secondary font-bold leading-[40px] ${isMobile ? "text-2xl mb-4" : "text-[34px] w-[50%]"}`}>
+            Encontre a oportunidade Perfeita em Portugal
+          </h1>
+
+          <button className="bg-secondary rounded-xl font-semibold text-primary p-3">
+            Ver imóveis em Portugal
+          </button>
         </div>
       </section>
     </main>

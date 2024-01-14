@@ -22,12 +22,12 @@ import Quintal from '@/assets/images/tem-quintal.png';
 import Internet from '@/assets/images/boa-internet.png';
 
 const IMAGES = [
-  [ SolManha.src, SolManha ],
-  [ AceitaPet.src, AceitaPet ],
-  [ OnibusPerto.src, OnibusPerto ],
-  [ Varanda.src, Varanda ],
-  [ Quintal.src, Quintal ],
-  [ Internet.src, Internet ],
+  SolManha.src,
+  AceitaPet.src,
+  OnibusPerto.src,
+  Varanda.src,
+  Quintal.src,
+  Internet.src,
 ];
 
 export const GlobalContext = createContext<GlobalContextData>({
