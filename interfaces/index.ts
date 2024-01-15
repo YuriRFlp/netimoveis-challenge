@@ -104,3 +104,8 @@ export interface PlaceCardProps {
   content: string[];
   mobile: boolean;
 }
+
+export interface PresentationProps {
+  reasons: Array<{ title: string, text: string }>;
+  mobile: boolean;
+}

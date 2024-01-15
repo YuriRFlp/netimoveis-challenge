@@ -26,6 +26,7 @@ import SC from '@/assets/images/SC.png';
 import SP from '@/assets/images/SP.png';
 import Portugal from '@/assets/images/portugal.png';
 import PortugalMobile from '@/assets/images/portugal-mobile.png';
+import Presentation from "@/components/presentantion/presentation";
 
 
 
@@ -67,7 +68,7 @@ export default function Home() {
 
       <FlatAds mobile={isMobile} />
 
-      <section className={`flex pt-16 ${isMobile ? 'flex-col bg-[#EDF1F4] px-4 pb-12' : 'justify-between items-baseline bg-gradient-to-r from-secondary to-[#E1E5E9] px-32 pb-24'}`}>
+      <section className={`flex pt-16 ${isMobile ? 'flex-col bg-[#F7F9FA] px-4 pb-12' : 'justify-between items-baseline bg-gradient-to-r from-secondary to-[#E1E5E9] px-32 pb-24'}`}>
         <div className={`text-left ${isMobile ? 'w-full' : 'w-[55%] max-w-[500px] mr-8'}`}>
           <h1 className={`font-bold text-[#4E5254] ${isMobile ? 'text-[34px]' : 'text-6xl'}`}>Encontre um lugar que é a sua cara</h1>
           {isMobile
@@ -114,7 +115,7 @@ export default function Home() {
 
       {isMobile
         ?
-          <section className="bg-[#EDF1F4] border-t-2 border-[#E1E5E9] pb-6 pt-12">
+          <section className="bg-[#F7F9FA] border-t-2 border-[#E1E5E9] pb-6 pt-12">
             <MenuCard
               mobile
               title={filtersContent.title}
@@ -143,7 +144,7 @@ export default function Home() {
           </section>
       }
 
-      <section className={`py-16 ${isMobile ? 'bg-[#EDF1F4]' : 'px-32'}`}>
+      <section className={`py-16 ${isMobile ? 'bg-[#F7F9FA]' : 'px-32'}`}>
         <FreeAds mobile={isMobile} />
 
         <div className={`my-20 ${isMobile && 'mx-4'}`}>
@@ -197,6 +198,24 @@ export default function Home() {
           </button>
         </div>
       </section>
+
+      <Presentation
+        mobile={isMobile}
+        reasons={[
+          {
+            title: 'Motivo para negociar com a Netimóveis',
+            text: 'Aqui é desenvolvido esse motivo para negociar com a Netimóveis. ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit',
+          },
+          {
+            title: 'Motivo para negociar com a Netimóveis',
+            text: 'Aqui é desenvolvido esse motivo para negociar com a Netimóveis. ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit',
+          },
+          {
+            title: 'Motivo para negociar com a Netimóveis',
+            text: 'Aqui é desenvolvido esse motivo para negociar com a Netimóveis. ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit',
+          }
+        ]}
+      />
     </main>
   )
 }
