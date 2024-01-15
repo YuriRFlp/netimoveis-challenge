@@ -58,6 +58,8 @@ export const GlobalContext = createContext<GlobalContextData>({
     description: "",
     textButton: "",
   },
+  tips: [],
+  tipsHandler: () => {},
 });
 
 const GlobalProvider = ({ children }: GlobalProviderData) => {
@@ -99,6 +101,10 @@ const GlobalProvider = ({ children }: GlobalProviderData) => {
     description: "",
     textButton: "",
   });
+  const [tips, setTips] = useState<Array<{
+    label: string,
+    active: boolean,
+  }>>([]);
 
   useEffect(() => {
     setIsMobile(window.screen.width < 801);
@@ -118,6 +124,11 @@ const GlobalProvider = ({ children }: GlobalProviderData) => {
       { label: 'Tem Varanda', active: false, icon: <MdBalcony size={20} color="#808587" /> },
       { label: 'Tem Quintal', active: false, icon: <MdYard size={20} color="#808587" /> },
       { label: 'Boa Internet', active: false, icon: <MdSignalWifi4Bar size={20} color="#808587" /> },
+    ]);
+    setTips([
+      { label: 'Tipos de Propriedades', active: true },
+      { label: 'Populares para Venda', active: false },
+      { label: 'Populares para Locação', active: false },
     ]);
     setBusinessContent(BussinesContentData[0]);
     setFiltersContent({...FiltersContentData[0], image: IMAGES[0]});
@@ -161,6 +172,8 @@ const GlobalProvider = ({ children }: GlobalProviderData) => {
         filtersContent,
         filtersTypes,
         filtersTypesHandler,
+        tips,
+        tipsHandler: (value) => setTips(value),
       }}
     >
       { children }

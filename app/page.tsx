@@ -22,6 +22,8 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import FacaParte from '@/assets/images/faca-parte.png';
 import FacaParteMobile from '@/assets/images/faca-parte-mobile.png';
 import Image from "next/image";
+import Menu from "@/components/shared/menu/menu";
+import List from "@/components/shared/list/list";
 
 
 export default function Home() {
@@ -35,6 +37,8 @@ export default function Home() {
     filtersTypes,
     filtersTypesHandler,
     filtersContent,
+    tips,
+    tipsHandler
   } = useContext(GlobalContext);
 
   return (
@@ -196,7 +200,7 @@ export default function Home() {
         ]}
       />
 
-      <section className={`${isMobile ? 'mx-4 mt-20' : 'mt-28 mb-20 mx-32'}`}>
+      <section className={`bg-[#FAF9F7] ${isMobile ? 'px-4 pt-20' : 'pt-28 pb-20 px-32'}`}>
         <div className={`mb-8 ${isMobile ? '' : "flex justify-between item-end"}`}>
           <h1 className={`${isMobile ? "font-bold text-[20px] text-[#4E5254]" : "font-bold text-[34px] text-[#393B3D]"}`}>
             { 'Para compradores, vendedores ou curiosos  :)' }
@@ -227,8 +231,8 @@ export default function Home() {
         </div>
       </section>
 
-      <div className={`${isMobile ? " " : "flex h-[328px] mx-32 rounded-xl"}`}>
-        <div className={`bg-[#1C2A39] ${isMobile ? "w-full px-4 pt-16" : " w-1/2 rounded-s-xl pl-10 pt-12"}`}>
+      <div className={`${isMobile ? "" : "bg-[#FAF9F7] flex px-32 rounded-xl pb-20"}`}>
+        <div className={`bg-[#1C2A39] ${isMobile ? "w-full px-4 pt-16" : " w-1/2 rounded-s-xl pl-10 pt-12 pb-12"}`}>
           <span className={`border-[1.5px] border-primary rounded-full cursor-default px-2 py-1 text-secondary ${isMobile && "text-sm"}`}>
             Parar Empresas
           </span>
@@ -257,6 +261,52 @@ export default function Home() {
             ></div>
         }
       </div>
+
+      <section className={`${isMobile ? 'mt-16' : 'mx-32 mt-10'}`}>
+        <Menu
+          options={tips}
+          optionsHandler={tipsHandler}
+        />
+
+        <div className={`${isMobile ? 'flex flex-wrap justify-between mx-4 mb-8' : 'flex items-center'}`}>
+          <List
+            title="Alugar"
+            items={[
+              'Apartamentos',
+              'Casas',
+              'Terrenos',
+              'Lojas',
+            ]}
+            containerCustom={`${isMobile ? "mt-12" : "mr-24 my-8"}`}
+            titleCustom="text-[#555555] font-bold mb-3 cursor-default"
+            textCustom="text-[#555555] text-sm mb-2 cursor-pointer"
+          />
+          <List
+            title="Comprar"
+            items={[
+              'Casas à venda',
+              'Imóv. em Condomínios',
+              'Comprar terrenos',
+              'Lançamentos',
+            ]}
+            containerCustom={`${isMobile ? "mt-12" : "mr-24 my-8"}`}
+            titleCustom="text-[#555555] font-bold mb-3 cursor-default"
+            textCustom="text-[#555555] text-sm mb-2 cursor-pointer"
+          />
+          <List
+            title="Comercial"
+            items={[
+              'Imóveis com escritório',
+              'Prédio comercial',
+              'Galpão de Armazenamento',
+              'Salão de Eventos',
+            ]}
+            containerCustom={`${isMobile ? "mt-12" : "mr-24 my-8"}`}
+            titleCustom="text-[#555555] font-bold mb-3 cursor-default"
+            textCustom="text-[#555555] text-sm mb-2 cursor-pointer"
+          />
+        </div>
+      </section>
     </main>
   )
 }

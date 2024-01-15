@@ -53,7 +53,7 @@ const Menu = ({ options, optionsHandler, classContainer='', classContent='' }: M
               <div
                 key={op.label}
                 onClick={() => activeHandler(op)}
-                className='flex flex-col items-center text-center cursor-pointer mr-4 w-[60px]'
+                className='flex flex-col items-center text-center cursor-pointer mr-4 min-w-[60px]'
               >
                 {op.icon && op.icon}
                 <p className={`${op.active ? 'text-[#393B3D]' : 'text-[#808587]'} px-2 hover:text-[#393B3D]`}>{ op.label }</p>

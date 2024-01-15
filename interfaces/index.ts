@@ -25,6 +25,8 @@ export interface GlobalContextData {
   }[]) => void;
   businessContent: { title: string, description: string, textButton: string, links?: string[] };
   filtersContent: { title: string, description: string, textButton: string, links?: string[], image?: any; };
+  tips: Array<{ label: string, active: boolean }>;
+  tipsHandler: Dispatch<SetStateAction<{ label: string, active: boolean }[]>>;
 };
 
 export interface BannerProps {
@@ -117,4 +119,12 @@ export interface NewsCardProps {
   type: string;
   title: string;
   mobile: boolean;
+}
+
+export interface ListProps {
+  title: string;
+  items: Array<string>;
+  containerCustom?: string;
+  titleCustom?: string;
+  textCustom?: string;
 }

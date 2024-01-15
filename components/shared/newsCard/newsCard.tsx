@@ -4,7 +4,7 @@ import { MdAccessTime } from "react-icons/md";
 
 const NewsCard = ({ image, time, type, title, mobile } : NewsCardProps) => {
   return (
-    <div className={`${mobile ? "w-full mb-12" : "max-w-[284px]"}`}>
+    <div className={`${mobile ? "w-full pb-12" : "max-w-[284px]"}`}>
       {mobile
         ? <Image src={image} alt="Notícias Netimóveis" loading="lazy" className="rounded-xl" />
         :
