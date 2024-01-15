@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import { Dispatch, ReactNode, SetStateAction } from "react";
 
 export interface GlobalProviderData {
@@ -107,5 +108,13 @@ export interface PlaceCardProps {
 
 export interface PresentationProps {
   reasons: Array<{ title: string, text: string }>;
+  mobile: boolean;
+}
+
+export interface NewsCardProps {
+  image: StaticImageData;
+  time: number;
+  type: string;
+  title: string;
   mobile: boolean;
 }

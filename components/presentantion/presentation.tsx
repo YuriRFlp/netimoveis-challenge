@@ -18,7 +18,7 @@ const Presentation = ( { reasons, mobile } : PresentationProps ) => {
 
         {reasons.map((reason, index) => {
           return (
-            <div key={index} className={`relative ${mobile ? 'my-8' : 'mt-4'}`}>
+            <div key={index} className={`relative ${mobile ? 'py-8' : 'mt-4'}`}>
               <h1 className='font-bold text-[#4E5254] mb-4 flex items-center'>
                 <span className={`rounded-full w-3 h-3 block bg-[#A1A7AA] mr-3 ${mobile ? '' : 'absolute top-1.5 -left-6'}`} />
                 { reason.title }
