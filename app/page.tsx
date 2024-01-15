@@ -24,6 +24,8 @@ import FacaParteMobile from '@/assets/images/faca-parte-mobile.png';
 import Image from "next/image";
 import Menu from "@/components/shared/menu/menu";
 import List from "@/components/shared/list/list";
+import Ios from '@/assets/images/app-store.png';
+import Google from '@/assets/images/google-play.png';
 
 
 export default function Home() {
@@ -268,7 +270,7 @@ export default function Home() {
           optionsHandler={tipsHandler}
         />
 
-        <div className={`${isMobile ? 'flex flex-wrap justify-between mx-4 mb-8' : 'flex items-center'}`}>
+        <div className={`${isMobile ? 'flex flex-wrap justify-between mx-4 mb-8' : 'flex items-start'}`}>
           <List
             title="Alugar"
             items={[
@@ -277,7 +279,7 @@ export default function Home() {
               'Terrenos',
               'Lojas',
             ]}
-            containerCustom={`${isMobile ? "mt-12" : "mr-24 my-8"}`}
+            containerCustom={`${isMobile ? "mt-12" : "min-w-[230px] my-8"}`}
             titleCustom="text-[#555555] font-bold mb-3 cursor-default"
             textCustom="text-[#555555] text-sm mb-2 cursor-pointer"
           />
@@ -289,7 +291,7 @@ export default function Home() {
               'Comprar terrenos',
               'Lançamentos',
             ]}
-            containerCustom={`${isMobile ? "mt-12" : "mr-24 my-8"}`}
+            containerCustom={`${isMobile ? "mt-12" : "min-w-[230px] my-8"}`}
             titleCustom="text-[#555555] font-bold mb-3 cursor-default"
             textCustom="text-[#555555] text-sm mb-2 cursor-pointer"
           />
@@ -301,12 +303,73 @@ export default function Home() {
               'Galpão de Armazenamento',
               'Salão de Eventos',
             ]}
-            containerCustom={`${isMobile ? "mt-12" : "mr-24 my-8"}`}
+            containerCustom={`${isMobile ? "mt-12" : "min-w-[230px] my-8"}`}
             titleCustom="text-[#555555] font-bold mb-3 cursor-default"
             textCustom="text-[#555555] text-sm mb-2 cursor-pointer"
           />
         </div>
       </section>
+
+      <div className={`bg-[#EDF1F4] ${isMobile ? 'px-4 py-8' : 'flex items-start px-32'}`}>
+        <List
+          title="A Netimóveis"
+          items={[
+            'Quem somos',
+            'Como funciona',
+            'Seja um parceiro',
+            'Quero me associar',
+            'Acessoria de imprensa',
+            'Soluções Corporativas',
+            'Covid-19',
+          ]}
+          containerCustom={`${isMobile ? "" : "min-w-[230px] my-8"}`}
+          titleCustom="text-[#063D7E] font-bold mb-3 cursor-default"
+          textCustom="text-[#555555] text-sm mb-2 cursor-pointer"
+        />
+        <List
+          title="Recursos"
+          items={[
+            'Comprar',
+            'Alugar',
+            'Lançamentos',
+            'Anunciar Imóvel',
+            'Simular Financiamento',
+            'Imobiliárias',
+            'Blog',
+          ]}
+          containerCustom={`${isMobile ? "mt-12" : "min-w-[230px] my-8"}`}
+          titleCustom="text-[#063D7E] font-bold mb-3 cursor-default"
+          textCustom="text-[#555555] text-sm mb-2 cursor-pointer"
+        />
+        <List
+          title="Contato"
+          items={[
+            'Fale Conosco',
+            'Perguntas Frequentes',
+            'Suporte',
+          ]}
+          containerCustom={`${isMobile ? "mt-12" : "min-w-[230px] my-8"}`}
+          titleCustom="text-[#063D7E] font-bold mb-3 cursor-default"
+          textCustom="text-[#555555] text-sm mb-2 cursor-pointer"
+        />
+        <div>
+          <List
+            title="Nossos Aplicativos"
+            items={[
+              'Loc Fácil Netimóveis',
+              'Pro Imob Netimóveis',
+            ]}
+            containerCustom={`${isMobile ? "mt-12" : "min-w-[230px] my-8"}`}
+            titleCustom="text-[#063D7E] font-bold mb-3 cursor-default"
+            textCustom="text-[#555555] text-sm mb-2 cursor-pointer"
+          />
+
+          <div className="flex items-center">
+            <Image src={Ios} alt="Badge app store" loading="lazy" className="mr-3" />
+            <Image src={Google} alt="Badge google play" loading="lazy" />
+          </div>
+        </div>
+      </div>
     </main>
   )
 }
