@@ -19,6 +19,9 @@ import PortugalMobile from '@/assets/images/portugal-mobile.png';
 import { PLACE_IMAGES, NEWS } from "@/assets/data/data";
 import NewsCard from "@/components/shared/newsCard/newsCard";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import FacaParte from '@/assets/images/faca-parte.png';
+import FacaParteMobile from '@/assets/images/faca-parte-mobile.png';
+import Image from "next/image";
 
 
 export default function Home() {
@@ -223,6 +226,37 @@ export default function Home() {
           })}
         </div>
       </section>
+
+      <div className={`${isMobile ? " " : "flex h-[328px] mx-32 rounded-xl"}`}>
+        <div className={`bg-[#1C2A39] ${isMobile ? "w-full px-4 pt-16" : " w-1/2 rounded-s-xl pl-10 pt-12"}`}>
+          <span className={`border-[1.5px] border-primary rounded-full cursor-default px-2 py-1 text-secondary ${isMobile && "text-sm"}`}>
+            Parar Empresas
+          </span>
+          <h1 className={`text-secondary font-bold my-4 ${isMobile ? "text-2xl mt-6" : "text-[34px]"}`}>Faça parte da Netimóveis</h1>
+          <p className="text-[20px] text-[#C0C7CA] my-5">É uma empresa ou rede de imobiliárias? Associe-se e alcance um próximo patamar de eficiência e tecnologia.</p>
+          <div className={`${isMobile ? "mt-8 pb-8" : "flex items-end"}`}>
+            <button className="rounded-md mr-6 bg-secondary text-primary font-semibold py-2 px-3">Mais Sobre se Associar</button>
+            <button className={`text-sm text-secondary border-b border-secondary ${isMobile ? "mt-6" : "ml-6"}`}>
+              Conheça Nossos Produtos
+            </button>
+          </div>
+        </div>
+
+        {isMobile
+          ?
+            <Image
+              src={FacaParteMobile}
+              alt="Faça parte da Netimóveis"
+              loading="lazy"
+              className="-translate-y-1"
+            />
+          :
+            <div
+              style={{ backgroundImage: `url(${FacaParte.src})` }}
+              className="bg-cover w-1/2 rounded-e-xl"
+            ></div>
+        }
+      </div>
     </main>
   )
 }
