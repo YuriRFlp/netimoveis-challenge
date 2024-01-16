@@ -11,9 +11,9 @@ const PlaceCard = ({ name, state, placeId, image, content, mobile } : PlaceCardP
         </h2>
       </div>
 
-      {content.map((data, index) => {
+      {content.map(data => {
         return (
-          <div key={index} className={`flex items-center text-sm my-2 ml-4 ${mobile ? 'text-[#4E5254]' : 'text-[#808587]'}`}>
+          <div key={data} className={`flex items-center text-sm my-2 ml-4 ${mobile ? 'text-[#4E5254]' : 'text-[#808587]'}`}>
             <span className='block w-1.5 h-1.5 bg-primary rounded-full mr-2' />
             { `${data} ${name}` }
           </div>

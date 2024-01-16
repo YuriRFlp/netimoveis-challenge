@@ -1,26 +1,52 @@
-# Front-end Challenge - Netimóveis 20240110
+# Front-end Challenge - Netimóveis
 
 ## Introdução
 
-Este é o nosso case técnico para Front-end! A ideia é que você possa mostrar toda sua expertise técnica através dele :D
-Estamos animados para te ver brilhar novamente!
+Esta é a plataforma Netimóveis! Aqui você encontra todos os imóveis disponíveis em várias cidades espalhadas pelo Brasil, ou até mesmo em Portugal. Através da plataforma você consegue alugar, comprar ou anunciar o seu próprio imóvel.
 
-[SPOILER] As instruções de entrega e apresentação do challenge estão no final deste Readme (=
+### Desenvolvimento
 
-### Antes de começar
+1. Criei um contexto global para a aplicação (`context/globalContext.tsx`) para concentrar a lógica do sistema em um só arquivo, facilitando o armazenamento e gerenciamento dos dados que precisam ser utilizados em vários componentes, como por exemplo, a variável `isMobile` que é utilizada para verificar se a tela é de um dispositivo mobile ou desktop;
 
-- Prepare o projeto para ser disponibilizado no Github, copiando o conteúdo deste repositório para o seu (ou utilize o fork do projeto e aponte para o Github). Confirme que a visibilidade do projeto é pública (não esqueça de colocar no readme a referência a este challenge);
-- O projeto deve utilizar a Linguagem específica ou Framework na sua Vaga (caso esteja se candidatando). Por exempo: Next.js, React e entre outras;
-- Considere como *deadline 5 dias a partir do início do desafio*. Caso tenha sido convidado a realizar o teste e não seja possível concluir dentro deste período, avise a pessoa que o convidou para receber instruções sobre o que fazer.
-- Documentar todo o processo de investigação para o desenvolvimento da atividade (README.md no seu repositório); os resultados destas tarefas são tão importantes do que o seu processo de pensamento e decisões à medida que as completa, por isso tente documentar e apresentar os seus hipóteses e decisões na medida do possível.
+2. Para simplificar e definir a estrutura dos dados foram criadas duas classes: Flat e Place (`classes/index.ts`);
 
-### Instruções iniciais obrigatórias
+3. Criei as interfaces do contexto e de todos os componentes (`interfaces/index.ts`) para especificar a estrutura de cada item e, assim, evitar qualquer tipo de erro durante o desenvolvimento;
 
-- Utilizar o framework Next.js (opte pela versão que preferir)
-- Utilizar o framework Tailwind CSS para a UI (pode usar outros, porém, conta muito para nós usar o Tailwind CSS ) ♥
-- Utilizar classes para os dados.
-- Seguir o protótipo da tela
-- 
+4. Primeiramente foi desenvolvido os componentes que compõe o layout da aplicação (`app/layout.tsx`) - Navbar (`components/template/navbar`) e Footer (`components/template/footer`);
+
+5. Em seguida foram desenvolvidos os demais componentes para a página principal (`app/page.tsx`), de acordo com o protótipo do [Figma](https://www.figma.com/file/2EtnsMH0vQ5IeNRDmd6Gez/Untitled?type=design&node-id=1-215&mode=design&t=VczS9FvOybobEkfg-0);
+
+### Tecnologias
+
+- Next.js;
+- Typescript;
+- Tailwind CSS;
+- Context API;
+- Jest;
+- React Testing Library;
+- React Multi Carousel;
+- React Icons;
+
+### Instalar e iniciar o projeto
+Instalar as dependências, rodar:
+```
+npm install
+# or
+yarn install
+```
+
+Iniciar o servidor de desenvolvimento local, rodar:
+```
+npm run dev
+# or
+yarn dev
+```
+
+Abrir o navegador no endereço da aplicação: [http://localhost:3000](http://localhost:3000)
+
+>  This is a challenge by [Coodesh](https://coodesh.com/)
+
+
 
 ### Será um enorme **diferencial** para a gente se você: 
 - Optar por usar **TypeScript**.
@@ -61,7 +87,7 @@ Estude o Figma para trabalhar no projeto com os requisitos essênciais:
 - Uma descrição sobre o projeto em frase
 - Deve conter uma lista com linguagem, framework e/ou tecnologias usadas
 - Como instalar e usar o projeto (instruções)
-- Não esqueça o [.gitignore](https://www.toptal.com/developers/gitignore)
+- Não esqueça o [.gitignore](http://localhost:3000)
 - Se está usando github pessoal, referencie que é um challenge by coodesh:
 
 >  This is a challenge by [Coodesh](https://coodesh.com/)

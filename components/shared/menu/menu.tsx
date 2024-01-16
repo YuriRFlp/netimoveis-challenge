@@ -53,6 +53,7 @@ const Menu = ({ options, optionsHandler, classContainer='', classContent='' }: M
               <div
                 key={op.label}
                 onClick={() => activeHandler(op)}
+                onKeyDown={() => activeHandler(op)}
                 className='flex flex-col items-center text-center cursor-pointer mr-4 min-w-[60px]'
               >
                 {op.icon && op.icon}
