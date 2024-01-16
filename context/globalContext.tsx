@@ -60,6 +60,10 @@ export const GlobalContext = createContext<GlobalContextData>({
   },
   tips: [],
   tipsHandler: () => {},
+  location: '',
+  locationHandler: () => {},
+  bedroomsQtd: '',
+  bedroomsQtdHandler: () => {},
 });
 
 const GlobalProvider = ({ children }: GlobalProviderData) => {
@@ -105,6 +109,8 @@ const GlobalProvider = ({ children }: GlobalProviderData) => {
     label: string,
     active: boolean,
   }>>([]);
+  const [location, setLocation] = useState<string>('');
+  const [bedroomsQtd, setBedroomsQtd] = useState<string>('');
 
   useEffect(() => {
     setIsMobile(window.screen.width < 801);
@@ -174,6 +180,10 @@ const GlobalProvider = ({ children }: GlobalProviderData) => {
         filtersTypesHandler,
         tips,
         tipsHandler: (value) => setTips(value),
+        location,
+        locationHandler: (value) => setLocation(value),
+        bedroomsQtd,
+        bedroomsQtdHandler: (value) => setBedroomsQtd(value),
       }}
     >
       { children }

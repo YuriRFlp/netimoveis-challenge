@@ -9,6 +9,10 @@ export interface GlobalContextData {
   isMobile: boolean;
   showMobileMenu: boolean;
   menuHandler: Dispatch<SetStateAction<boolean>>;
+  location: string;
+  locationHandler: Dispatch<SetStateAction<string>>;
+  bedroomsQtd: string;
+  bedroomsQtdHandler: Dispatch<SetStateAction<string>>;
   searchTypes: Array<{ label: string, active: boolean }>;
   searchTypesHandler: Dispatch<SetStateAction<{ label: string, active: boolean }[]>>;
   businessTypes: Array<{ label: string, active: boolean, icon?: any }>;

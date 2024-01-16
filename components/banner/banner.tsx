@@ -1,3 +1,4 @@
+"use client";
 import bannerImage from '@/assets/images/banner_inicio.png';
 import bannerImageMobile from '@/assets/images/banner_ inicio_mobile.png';
 import Image from 'next/image';
@@ -19,13 +20,15 @@ const Banner = ({ mobile, menuOptions, optionsHandler }: BannerProps) => {
             <Search mobile={mobile} />
           </>
         :
-          <>
-            <Image src={bannerImage} alt="Banner de busca de apartamentos" loading="lazy" />
-            <div className='absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4 w-3/6 text-center'>
+          <div
+            style={{backgroundImage: `url(${bannerImage.src})` }}
+            className='bg-cover flex items-center justify-center h-[460px]'
+          >
+            <div className='w-3/6 text-center'>
               <h1 className='text-4xl text-secondary'>Vende. Aluga. Conecta.</h1>
               <Search mobile={mobile} />
             </div>
-          </>
+          </div>
       }
     </div>
   )

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "street": "Av. José Faria da Rocha",
+    "neighborhood": "Eldorado",
+    "city": "Contagem",
+    "state": "MG"
+  },
+  {
+    "id": 1,
+    "street": "Rua José Faria de Barros",
+    "neighborhood": "Parque imperial",
+    "city": "Salto",
+    "state": "MG"
+  },
+  {
+    "id": 2,
+    "street": "Rua José Faria de Almeida",
+    "neighborhood": "Jardim das Palmeiras",
+    "city": "Boituva",
+    "state": "MG"
+  },
+  {
+    "id": 3,
+    "street": "Rua José Faria de Carvalho",
+    "neighborhood": "Exemplo de texto sobresalente",
+    "city": "Pouso Alegre",
+    "state": "MG"
+  },
+  {
+    "id": 4,
+    "street": "Avenida José Maria de Faria",
+    "neighborhood": "Lapa de Baixo",
+    "city": "São Paulo",
+    "state": "SP"
+  }
+]
+

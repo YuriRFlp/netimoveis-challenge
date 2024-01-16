@@ -7,7 +7,7 @@ import { MdOutlineArrowForward } from "react-icons/md";
 const FreeAds = ({ mobile } : FreeAdsProps) => {
   return (
     <>
-      <div className={`${mobile ? 'px-4' : "flex items-center justify-between border border-[#D0D5D8] rounded-xl"}`}>
+      <div className={`min-[1600px]:mx-auto ${mobile ? 'px-4' : "flex items-center justify-between border border-[#D0D5D8] rounded-x max-w-[1200px]"}`}>
         {!mobile && <Image src={AnuncieGratis} alt="Anúncio grátis" className="rounded-s-xl"	loading="lazy" />}
         <div className={`${!mobile && 'mx-6' }`}>
           <h1 className="font-bold text-primary mb-3">

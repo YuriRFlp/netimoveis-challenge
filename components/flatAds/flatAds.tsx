@@ -10,7 +10,7 @@ import Flat3 from '@/assets/images/flat-3.png';
 
 const FlatAds = ({ mobile }: FlatAdsProps) => {
   return (
-    <section className={`${mobile ? 'mx-4' : 'mx-32'} my-14`}>
+    <section className={`${mobile ? 'mx-4' : 'mx-32 max-w-[1200px]'} my-14 min-[1600px]:mx-auto`}>
       <h2 className={`flex text-[#393B3D] font-bold ${mobile ? 'text-xl' : 'text-2xl'}`}>
         Novos Anúncios em
         <span className="text-primary font-bold ml-1">
